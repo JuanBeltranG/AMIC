@@ -12,11 +12,11 @@ class CardSwiper extends StatelessWidget {
 
     return Container(
       width: double.infinity,
-      height: size.height*0.35,
+      height: size.height*.9,
       child: Swiper(
         itemCount: 3,
-        itemWidth: size.width*0.60,
-        itemHeight: size.height*0.35,
+        itemWidth: size.width*.85,
+        itemHeight: size.height*.9,
         layout: SwiperLayout.STACK,
         itemBuilder: (BuildContext context, int index){
           return getCard(index);
@@ -28,9 +28,21 @@ class CardSwiper extends StatelessWidget {
     return Card(
       elevation: 10,
       shape: RoundedRectangleBorder( borderRadius: BorderRadius.circular(20.0) ),
-      child: ListTile(
-        leading: Icon(Icons.photo_album, color: Colors.blue),
-        title: Text(opt[index]),
+      child: Column(
+        children: <Widget>[
+          SizedBox(height: 20),
+          Container(
+            width: 300,
+            height: 200,
+            child: Card(
+              elevation: 10,
+              shape: RoundedRectangleBorder( borderRadius: BorderRadius.circular(20.0) ),
+              child: ListTile(
+                title: Text(opt[index]),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

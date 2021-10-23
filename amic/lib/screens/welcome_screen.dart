@@ -77,7 +77,9 @@ class WelcomeScreen extends StatelessWidget {
               children: <Widget>[
                 ElevatedButton(
                   style: style,
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, 'Menu');
+                  },
                   child: Text(
                     'Soy nuevo',
                     style: buttonStyle,

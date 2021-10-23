@@ -1,3 +1,4 @@
+import 'package:amic/routes/routes.dart';
 import 'package:amic/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -13,11 +14,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: 'welcome',
-      routes:{
-        'welcome': ( _ ) => WelcomeScreen(),
-       
+      initialRoute: '/',
+      routes: getApplicationRoutes(),
+
+      onGenerateRoute: (settings ){
+        return MaterialPageRoute(
+          builder: (context) => WelcomeScreen()
+          );
       },
+
       theme: ThemeData.light().copyWith(
         appBarTheme: AppBarTheme(
           color: Colors.indigo,
