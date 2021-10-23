@@ -1,7 +1,6 @@
 import 'package:amic/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
-
 class MenuScreenPage extends StatelessWidget {
   const MenuScreenPage({Key? key}) : super(key: key);
 
@@ -13,11 +12,10 @@ class MenuScreenPage extends StatelessWidget {
         title: Text('AMIC'),
       ),
       body: Column(
-          children:  <Widget> [
-            CardSwiper(),
-            
-          ],
-        ),
+        children: <Widget>[
+          CardSwiper(),
+        ],
+      ),
     );
   }
 }

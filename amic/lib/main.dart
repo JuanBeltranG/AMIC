@@ -2,12 +2,7 @@ import 'package:amic/routes/routes.dart';
 import 'package:amic/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
-
 void main() => runApp(MyApp());
-
-
-
-
 
 class MyApp extends StatelessWidget {
   @override
