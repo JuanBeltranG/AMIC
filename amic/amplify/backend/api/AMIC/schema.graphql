@@ -1,0 +1,16 @@
+type PaquetesInversion @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  Nombre: String
+  Enlace: String
+  RangoL: Int
+  RangoR: Int
+}
+
+type PerfilInversionitas @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  Nombre: String
+  Edad: Int
+  Genero: String
+  Tipo: String
+  Puntaje: Int
+}
