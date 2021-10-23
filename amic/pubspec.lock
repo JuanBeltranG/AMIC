@@ -2,14 +2,14 @@
 # See https://dart.dev/tools/pub/glossary#lockfile
 packages:
   amplify_core:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: amplify_core
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.2.5"
   amplify_datastore:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: amplify_datastore
       url: "https://pub.dartlang.org"
@@ -36,6 +36,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.0"
+  card_swiper:
+    dependency: "direct main"
+    description:
+      name: card_swiper
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.4"
   characters:
     dependency: transitive
     description:
