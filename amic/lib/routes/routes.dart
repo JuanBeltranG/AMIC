@@ -1,4 +1,4 @@
-import 'package:amic/screens/menu_screen.dart';
+
 import 'package:amic/screens/screens.dart';
 import 'package:flutter/material.dart';
 
@@ -12,6 +12,10 @@ Map<String, WidgetBuilder> getApplicationRoutes(){
 
         '/'              : (BuildContext context) => WelcomeScreen(),
         'Menu'           : (BuildContext context) => MenuScreenPage(),
+        'Inflacion'      : (BuildContext context) => TeoriaInflacionScreen()
+
+
+        
       
   };
 
