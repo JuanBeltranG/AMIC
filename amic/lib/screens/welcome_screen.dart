@@ -67,7 +67,8 @@ class WelcomeScreen extends StatelessWidget {
                 ElevatedButton(
                   style: style,
                   onPressed: () {
-                    Navigator.pushNamed(context, 'Menu');
+                    //Navigator.pushNamed(context, 'Inflacion');
+                    _mensajeNuevo(context);
                   },
                   child: Text(
                     'Soy nuevo',
@@ -75,11 +76,100 @@ class WelcomeScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(width: 5),
+                ElevatedButton(
+                  style: style,
+                  onPressed: () {
+                    _mensajeExperiencia(context);
+                  },
+                  child: Text(
+                    'Tengo experiencia',
+                    style: buttonStyle,
+                  ),
+                ),
               ],
             ),
           ],
         ),
       ),
     );
+  }
+
+  void _mensajeNuevo(BuildContext context) {
+    showDialog(
+        context: context,
+        barrierDismissible: true,
+        builder: (context) {
+          return AlertDialog(
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20.0)),
+            title: Text(
+              'Antes repasemos un poco de teoria',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: getColorFromHex("#0033B0"),
+              ),
+            ),
+            content: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                const Image(
+                  image: AssetImage('resources/images/teoria.png'),
+                  height: 100,
+                ),
+              ],
+            ),
+            actions: <Widget>[
+              Center(
+                child: FlatButton(
+                  child: Text('Continuar'),
+                  onPressed: () {
+                    Navigator.pushNamed(context, 'Inflacion');
+                  },
+                ),
+              ),
+            ],
+          );
+        });
+  }
+
+  void _mensajeExperiencia(BuildContext context) {
+    showDialog(
+        context: context,
+        barrierDismissible: true,
+        builder: (context) {
+          return AlertDialog(
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20.0)),
+            title: Text(
+              '¿Desea repasar la teoria?',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: getColorFromHex("#0033B0"),
+              ),
+            ),
+            content: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                const Image(
+                  image: AssetImage('resources/images/teoria.png'),
+                  height: 100,
+                ),
+              ],
+            ),
+            actions: <Widget>[
+              FlatButton(
+                child: Text('Omitir'),
+                onPressed: () {
+                  Navigator.pushNamed(context, 'Menu');
+                },
+              ),
+              FlatButton(
+                  child: Text('Repasar'),
+                  onPressed: () {
+                    Navigator.pushNamed(context, 'Inflacion');
+                  }),
+            ],
+          );
+        });
   }
 }
