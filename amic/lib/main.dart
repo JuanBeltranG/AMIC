@@ -11,13 +11,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: getApplicationRoutes(),
-
-      onGenerateRoute: (settings ){
-        return MaterialPageRoute(
-          builder: (context) => WelcomeScreen()
-          );
+      onGenerateRoute: (settings) {
+        return MaterialPageRoute(builder: (context) => WelcomeScreen());
       },
-
       theme: ThemeData.light().copyWith(
         appBarTheme: AppBarTheme(
           color: Colors.indigo,

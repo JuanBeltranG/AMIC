@@ -2,13 +2,11 @@ import 'package:amic/utils/hex_color_util.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeScreen extends StatelessWidget {
-
-
   final ButtonStyle style = ElevatedButton.styleFrom(
       elevation: 15,
       textStyle: const TextStyle(fontSize: 15),
       primary: getColorFromHex("#FFFFFF"),
-     //shape: const StadiumBorder(),
+      //shape: const StadiumBorder(),
       minimumSize: const Size(180, 45));
 
   final buttonStyle = TextStyle(
@@ -32,11 +30,7 @@ class WelcomeScreen extends StatelessWidget {
     fontSize: 19,
     color: getColorFromHex("#FFFFFF"),
     fontWeight: FontWeight.bold,
-    
   );
-
-  
-  
 
   @override
   Widget build(BuildContext context) {
@@ -59,19 +53,14 @@ class WelcomeScreen extends StatelessWidget {
             ),
             Text('Aqui comienza tu ruta para ser un inversionista',
                 style: tittleStyle2),
-            const SizedBox(
-              height:25
-            ),
+            const SizedBox(height: 25),
 
-            
             /*Text('¿Tienes conocimientos solidos acerca de las inversiones?',
                 style: questionStyle,
                 textAlign: TextAlign.center,
             ),*/
-            
-            const SizedBox(
-              height:55
-            ),
+
+            const SizedBox(height: 55),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
@@ -85,16 +74,7 @@ class WelcomeScreen extends StatelessWidget {
                     style: buttonStyle,
                   ),
                 ),
-               
                 SizedBox(width: 5),
-                ElevatedButton(
-                  style: style,
-                  onPressed: () {},
-                  child: Text(
-                    'Tengo experiencia',
-                    style: buttonStyle,
-                  ),
-                ),
               ],
             ),
           ],
