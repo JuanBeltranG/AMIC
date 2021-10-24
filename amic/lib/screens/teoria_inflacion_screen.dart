@@ -62,7 +62,7 @@ class TeoriaInflacionScreen extends StatelessWidget {
             ElevatedButton(
               style: style,
               onPressed: () {
-                Navigator.pushNamed(context, '/');
+                Navigator.pushNamed(context, 'ImportanciaInvertir');
               },
               child: Text(
                 'Continuar',
